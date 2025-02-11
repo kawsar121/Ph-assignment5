@@ -12,12 +12,13 @@
     />
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body class="">
-    <!-- Navbar Start -->
-    <nav>
-      <div class="navbar bg-base-100 lg:p-6">
+  <body >
+   <div class="sticky top-0 z-50 bg-base-100 p-8 lg:p-6 shadow-md">
+     <!-- Navbar Start -->
+     <nav class="">
+      <div class="navbar bg-base-100 p-0 gap-5 lg:p-6">
         <div class="navbar-start">
-          <a class="bg-green-800 btn btn-ghost text-xl">Blog</a>
+          <a class="bg-green-800 btn btn-ghost text-xl" href="/blog.html">Blog</a>
         </div>
         <div class="navbar-center lg:flex gap-3">
           <div>
@@ -39,25 +40,24 @@
     </nav>
     <!-- Navbar End -->
 
-    <!-- Header Part Start -->
-    <header>
+    <header id="header" class="">
       <div class="flex justify-center mt-5 gap-6">
-        <button
-          class="bg-[#B4F461] font-semibold text-base border-none text-black btn btn-accent"
-        >
-          Donation
+        <button id="donationBtn"
+          class="bg-[#B4F461] font-semibold text-base border-none text-black btn btn-accent">
+          <a href="/Donation/index.html">Donation</a>
         </button>
         <button
-          class="btn font-semibold text-base bg-[#1111114D] border-none text-[#111111B3] btn-secondary"
-        >
+         id="historyBtn" class="btn font-semibold text-base bg-[#1111114D] border-none text-[#111111B3] btn-secondary">
           History
         </button>
       </div>
     </header>
     <!-- Header Part Start -->
+   </div>
 
-    <!-- Main Start -->
-    <main>
+    <main id="main">
+
+      <!-- First -->
       <div
         class="lg:flex justify-center sm:ml-10 gap-20 ml-8 items-center mt-20"
       >
@@ -102,11 +102,116 @@
           </button>
         </div>
       </div>
-    </main>
-    <!-- Main End -->
 
-    
+      <!-- second Start -->
+      <div
+      class="lg:flex justify-center sm:ml-10 gap-20 ml-8 items-center mt-20"
+    >
+      <div>
+        <img src="/assets/feni.png" alt="" srcset="" />
+      </div>
+      <div>
+        <div class="stats shadow">
+          <div class="stat flex items-center gap-2 bg-[#1111110D]">
+            <div class="stat-title">
+              <img src="/assets/coin.png" alt="" srcset="" />
+            </div>
+            <div id="stat2" class="stat-value text-2xl">0.00</div>
+            <div class="stat-desc">BDT</div>
+          </div>
+        </div>
+        <h2 class="text-xl text-black font-bold">
+          Donate for Flood Relief in Feni,Bangladesh
+        </h2>
+        <p class="text-base font-light">
+          The recent floods in Noakhali have caused significant damage to
+          <br />
+          homes infrastructure. Your donation will help provide essential
+          <br />
+          supplies and to those affected by this disaster. Every contribution,
+          <br />
+          big or small, makes difference. Please join us in supporting the
+          relief <br />
+          efforts and making a positive impact on the lives of those in need.
+        </p>
+        <input
+          id="input2"
+          type="text"
+          placeholder="Write Donation Amount"
+          class="input input-bordered my-5 w-full max-w-xs"
+        />
+        <button
+          id="btnDonate2"
+          class="px-40 lg:px-72 py-2 btn bg-[#B4F461] text-lg font-semibold text-black"
+        >
+          Donate Now
+        </button>
+      </div>
+    </div>
+    <div id="ok" class="hidden">
+      <h2>helkdfop</h2>
+    </div>
+    <!-- second End -->
+    <!-- Third Start -->
+    <div
+        class="lg:flex justify-center sm:ml-10 gap-20 ml-8 items-center mt-20"
+      >
+        <div>
+          <img src="/assets/quota-protest.png" alt="" srcset="" />
+        </div>
+        <div>
+          <div class="stats shadow">
+            <div class="stat flex items-center gap-2 bg-[#1111110D]">
+              <div class="stat-title">
+                <img src="/assets/coin.png" alt="" srcset="" />
+              </div>
+              <div id="stat3" class="stat-value text-2xl">0.00</div>
+              <div class="stat-desc">BDT</div>
+            </div>
+          </div>
+          <h2 class="text-xl text-black font-bold">
+            Donate for Flood at Noakhali, Bangladesh
+          </h2>
+          <p class="text-base font-light">
+            Aid for Injured in the Quota Movement
+            <br />
+            homes infrastructure. Your donation will help provide essential
+            <br />
+            supplies and to those affected by this disaster. Every contribution,
+            <br />
+            big or small, makes difference. Please join us in supporting the
+            relief <br />
+            efforts and making a positive impact on the lives of those in need.
+          </p>
+          <input
+            id="input3"
+            type="text"
+            placeholder="Write Donation Amount"
+            class="input input-bordered my-5 w-full max-w-xs"
+          />
+          <button
+            id="btnDonate3"
+            class="px-40 lg:px-72 py-2 btn bg-[#B4F461] text-lg font-semibold text-black"
+          >
+            Donate Now
+          </button>
+        </div>
+    </div>
+    <!-- Third End -->
+    </main>
+
+    <!-- history Start -->
+    <div id="historyMain" class="hidden mx-0 lg:mx-40  mt-10 bg-white">
+      <div class="p-6  ">
+        <h2 class="text-center  text-red-600 text-3xl ">Donation History</ h2>
+        <div class="text-center text-[#111111] text-base mt-5" id="historyContainer"></div>
+        <div class="text-center text-xs text-[#111111B3] mt-2" id="historyContainer2"></div>
+      </div>
+    </div>
+     <!-- history Start -->
+      
     <!-- Js Add -->
     <script src="/index.js"></script>
+    <!-- <script src="/History/history.js"></script> -->
   </body>
 </html>
